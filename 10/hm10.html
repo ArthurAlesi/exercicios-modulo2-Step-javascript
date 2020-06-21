@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex 10</title>
+</head>
+
+<body>
+    <input placeholder="nome" id="nome" name="nome"> <br>
+    <input placeholder="Email" id="email" name="email"><br>
+    <input placeholder="cpf" maxlength="11" id="cpf" name="cpf"><br>
+    <button onclick="enviar()">enviar</button>
+    <p id="cadastros"> todos os cadastros: </p>
+    <script>
+        var listaFormulario = []
+
+
+        function enviar() {
+            var formulario = []
+            var nome = document.getElementById("nome").value
+            var email = document.getElementById("email").value
+            var cpf = document.getElementById("cpf").value
+            formulario.push(nome)
+            formulario.push(email)
+            formulario.push(cpf)
+            listaFormulario.push(formulario)
+            zerar()
+            exibir()
+        }
+
+        function zerar() {
+            document.getElementById("nome").value = null
+            document.getElementById("email").value = null
+            document.getElementById("cpf").value = null
+        }
+
+        function exibir() {
+            var text = "todos os cadastros: <br>"
+            for (var i = 0; i < listaFormulario.length; i++) {
+                text += `Nome: ${listaFormulario[i][0]} <br>`
+                text += `Email: ${listaFormulario[i][1]} <br>`
+                text += `Cpf: ${listaFormulario[i][2]} <br><br>`
+
+            }
+            document.getElementById("cadastros").innerHTML = text
+        }
+    </script>
+</body>
+
+</html>

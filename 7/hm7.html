@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .externa {
+            position: relative;
+        }
+        
+        .white {
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: rgb(230, 226, 226);
+        }
+        
+        .gray {
+            float: left;
+            width: 30px;
+            height: 30px;
+            background: rgb(117, 116, 116);
+        }
+    </style>
+
+    <title>exercicio 07</title>
+</head>
+
+
+
+<p id="exibir"> </p>
+
+<body>
+    <script>
+        var xadrez = [
+            ["T", "C", "B", "REI", "RAI", "B", "C", "T"],
+            ["P ", " P ", " P ", " P ", " P ", " P ", " P ", " P "],
+            ["  ", " ", " ", " ", " ", "", " ", " "],
+            ["  ", " ", " ", " ", " ", "", " ", " "],
+            ["  ", " ", " ", " ", " ", "", " ", " "],
+            ["  ", " ", " ", " ", " ", "", " ", " "],
+            ["P", "P", "P", "P", "P", "P", "P", "P"],
+            ["T", "C", "B", "REI", "RAI", "B", "C", "T"]
+        ]
+
+        var texto = ""
+        var cor = false
+        var corNome;
+
+        for (var i = 0; i < xadrez.length; i++) {
+            texto += "<div class='externa'>"
+
+            for (var j = 0; j < xadrez.length; j++) {
+                if (cor == false) {
+                    corNome = "white"
+                    cor = true
+
+                } else {
+                    corNome = "gray"
+                    var cor = false
+                }
+
+                texto += `<div class=${corNome} >` + xadrez[i][j] + "</div>"
+            }
+            if (cor == false) {
+                cor = true
+            } else {
+                var cor = false
+            }
+            //texto += "<br>"
+            texto += "</div> <p>&nbsp;</p>"
+        }
+
+
+        document.getElementById("exibir").innerHTML = texto
+    </script>
+</body>
+
+
+</html>

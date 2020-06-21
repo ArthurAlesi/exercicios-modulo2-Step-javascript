@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>hm 13</title>
+</head>
+
+<body>
+    <script>
+        lanterna = new Lanterna()
+        pilha1 = new Pilha(5)
+        pilha2 = new Pilha(5)
+
+
+
+
+        function Lanterna() {
+            var pronta;
+            this.ligar = ligar()
+            this.trocar = trocar()
+
+            function ligar() {
+                if (pronta) {
+
+                }
+            }
+
+        }
+
+        function Pilha(par) {
+            var voltagem = par;
+            this.obtemStatus = obtemStatus();
+
+            console.log(voltagem)
+
+
+
+            function obtemStatus() {
+                if (voltagem > 0) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

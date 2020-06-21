@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+
+
+    <title>ex 12</title>
+</head>
+
+<body>
+
+    <button onclick="pergunta(2)"> reta</button>
+    <button onclick="pergunta(3)">triângulo</button>
+    <button onclick="pergunta(4)">quadrado</button>
+    <p id="perg"></p>
+    <p id="desenho"></p>
+
+    <!-- reta -->
+
+    <script>
+        var num
+        let figura;
+
+        function pergunta(param) {
+            var text = ""
+            num = param
+            for (var i = 1; i <= param; i++) {
+
+                text += `ponto ${i} <br>`
+                text += `<input placeholder='coord. x' id="pt${i}x"><br>`
+                text += `<input placeholder='coord. y' id="pt${i}y"><br><br>`
+            }
+            text += `<button onclick="geraPoligono(num)"> enviar </button>`
+            document.getElementById("perg").innerHTML = text
+
+        }
+
+        function Ponto(pa) {
+            let coorde = `pt${pa}x`
+            this.x = document.getElementById(coorde).value
+
+            coorde = `pt${pa}y`
+            this.y = document.getElementById(coorde).value
+
+        }
+
+        function geraPoligono(parametro) {
+
+            switch (parametro) {
+                case 2:
+                    figura = new Reta()
+                    break;
+                case 3:
+                    figura = new Triangulo()
+                    break;
+                case 4:
+                    figura = new Quadrado()
+                    break;
+            }
+
+
+        }
+
+        function Reta() {
+
+            this.pt1 = new Ponto(1)
+            this.pt2 = new Ponto(2)
+        }
+
+        function Triangulo() {
+
+            this.pt1 = new Ponto(1)
+            this.pt2 = new Ponto(2)
+            this.pt3 = new Ponto(3)
+        }
+
+        function Quadrado() {
+
+            this.pt1 = new Ponto(1)
+            this.pt2 = new Ponto(2)
+            this.pt3 = new Ponto(3)
+            this.pt4 = new Ponto(4)
+        }
+    </script>
+</body>
+
+</html>

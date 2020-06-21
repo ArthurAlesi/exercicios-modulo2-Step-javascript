@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio 07</title>
+</head>
+
+<body>
+
+
+    <input id="n1">
+    <span id="ope"> </span>
+
+    <input id="n2">> =
+    <span id="resultado"> ? </span>
+    <br>
+    <button onclick="defOperador('+')"> + </button>
+    <button onclick="defOperador('-')"> - </button>
+    <button onclick="defOperador('*')"> * </button>
+    <button onclick="defOperador('/')"> / </button>
+    <button onclick="resolver()"> = </button>
+
+
+    <script>
+        function defOperador(param) {
+
+
+            document.getElementById("ope").innerHTML = param
+
+        }
+
+        defOperador('__')
+
+
+        function getOperador() {
+            var opera = document.getElementById("ope").textContent;
+
+            return opera
+        }
+
+        function resolver() {
+            var operador = getOperador()
+            var n1;
+            var n2;
+            n1 = document.getElementById("n1").value
+            n2 = document.getElementById("n2").value
+            n1 = Number(n1)
+            n2 = Number(n2)
+            var conta = Number(0)
+            switch (operador) {
+                case '+':
+                    conta = n1 + n2
+                    break;
+                case '-':
+                    conta = n1 - n2
+                    break;
+                case '*':
+                    conta = n1 * n2
+                    break;
+                case '/':
+                    conta = n1 / n2
+                    break;
+                default:
+                    conta = "inválido"
+                    break;
+            }
+            document.getElementById("resultado").innerHTML = conta
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TESTE</title>
+    <style>
+        div {
+            border: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body onload="exibeDisponivel()">
+
+
+    <h1> monte seus ingrediente</h1>
+
+
+    <div>
+        <h2>items disponiveis:</h2>
+        <p id="disponiveis"> lorem </p>
+        <!-- <p id="dispoBebida"> lorem2</p> -->
+    </div>
+
+    <!--  -->
+
+    <br>
+    <input id="comida" placeholder="monte seu prato">
+    <button onclick="addLista()"> escolher</button>
+
+    <!--  -->
+    <br>
+    <div>
+        <h2>escolhidos:</h2>
+        <p id="escolhidos"> nenhum escolhido até agora</p>
+        <p id="total"> <strong>total = 0</strong></p>
+
+    </div>
+    <script>
+        var listaExibida = []
+        var lista = ["arroz", 5.30,
+            "feijao", 4.80,
+            "salada", 2.00,
+            "macarrao", 2.00
+        ]
+
+
+        var bebida = ["coca", 5.30,
+            "guarana", 4.80,
+            "suco", 2.00,
+            "agua", 2.00
+        ]
+
+
+
+        function exibeDisponivel() {
+            var texto = ""
+
+            for (var i = 0; i < lista.length; i++) {
+                if (i % 2 == 0) {
+                    texto = texto + lista[i] + ": "
+
+                } else {
+                    texto = texto + lista[i] + "<br> "
+
+                }
+            }
+            document.getElementById("disponiveis").innerHTML = texto
+        }
+
+        var total = 0.0
+
+        function calculaTotal(param) {
+            param = Number(lista[param])
+            total += param
+            document.getElementById("total").innerHTML = "<strong>total " + total + "</strong>"
+        }
+
+
+
+        function addLista() {
+            var item = document.getElementById("comida").value
+            for (var i = 0; i < lista.length; i++) {
+                var dentro = false
+                if (item == lista[i]) {
+                    listaExibida.push(lista[i])
+                    listaExibida.push(lista[i + 1] + "<br>")
+                    calculaTotal(i + 1)
+                    dentro = true
+                }
+                if (dentro == true) {
+                    lista.splice(i + 1, 1)
+                    lista.splice(i, 1)
+                    break;
+                }
+
+                dentro = false
+            }
+            document.getElementById("escolhidos").innerHTML = listaExibida
+            exibeDisponivel()
+        }
+    </script>
+</body>
+
+</html>

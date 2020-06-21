@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>lampada</title>
+</head>
+
+<body>
+
+    <button onclick="clicar(1,2,3)">interruptor 1</button>
+    <button onclick="clicar(4,5,6)">interruptor 2</button>
+    <p>
+        <p>
+            >> CONJUNTO 1: <br>
+            <span id="lamp1">lâmpada 1 apagada</span> <br>
+            <span id="lamp2">lâmpada 2 apagada</span>
+
+        </p>
+
+
+        <p>
+            >> CONJUNTO 2: <br>
+            <span id="lamp3">lâmpada 3 apagada</span> <br>
+            <span id="lamp4">lâmpada 4 apagada</span>
+
+        </p>
+
+        <p>
+            >> CONJUNTO 3: <br>
+            <span id="lamp6">lâmpada 6 apagada</span> <br>
+            <span id="lamp5">lâmpada 5 apagada</span>
+        </p>
+
+    </p>
+
+    <script>
+        function clicar(pr1, pr2, pr3) {
+            var lampA = "lamp" + pr1
+            var lampB = "lamp" + pr2
+            var lampC = "lamp" + pr3
+
+            acesa = getLampada()
+
+            if (acesa == false) {
+
+                acender(pr1, pr2, pr3)
+
+            } else {
+
+                apagar(pr1, pr2, pr3)
+            }
+
+            function getLampada() {
+                var x = document.getElementById(lampA).textContent
+                var texto = `lâmpada ${pr1} ACESA`
+
+                if (x == texto) {
+                    return true
+                } else {
+                    return false
+                }
+            }
+
+            function acender(param1, param2, param3) {
+                document.getElementById(lampA).innerHTML = `lâmpada ${param1} ACESA`
+                document.getElementById(lampB).innerHTML = `lâmpada ${param2} ACESA`
+                document.getElementById(lampC).innerHTML = `lâmpada ${param3} ACESA`
+            }
+
+            function apagar(param1, param2, param3) {
+                document.getElementById(lampA).innerHTML = `lâmpada ${param1} apagada`
+                document.getElementById(lampB).innerHTML = `lâmpada ${param2} apagada`
+                document.getElementById(lampC).innerHTML = `lâmpada ${param3} apagada`
+            }
+
+        }
+    </script>
+</body>
+
+</html>

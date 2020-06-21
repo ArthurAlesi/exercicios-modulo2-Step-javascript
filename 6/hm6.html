@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio 6 / Restaurante</title>
+
+    <style>
+        div {
+            border: solid;
+            border-width: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>comidas disponiveis</h1>
+    <p id="comidas"> </p>
+    <h1>Bebidas disponiveis</h1>
+
+    <p id="bebida"> </p>
+
+    <h2>crie o seu prato</h2>
+    <input id="addComida" placeholder="Escolha seu prato">
+
+
+    <script>
+        var htmlComida = document.getElementById("comidas")
+        var htmlBebida = document.getElementById("bebida")
+        var comida = ["arroz", 5.30,
+            "feijao", 4.80,
+            "salada", 2.00,
+            "batata", 3.00,
+            "macarrao", 5.00,
+            "bife", 4.00,
+            "frango", 3.50
+        ]
+
+        var comidaString = "";
+        var bebidaString = "";
+
+        for (var i = 0; i < comida.length; i++) {
+            if (i % 2 == 0) {
+                comidaString = comidaString + comida[i] + ": "
+            } else {
+                comidaString = comidaString + comida[i] + " <br>"
+            }
+
+        }
+        htmlComida.innerHTML = comidaString;
+
+
+
+        var bebida = ["coca", 5.00,
+            "guarana", 4.50,
+            "cerveja", 6.00,
+            "agua", 2.00,
+            "suco", 5.00,
+        ]
+
+
+        for (var j = 0; j < bebida.length; j++) {
+            if (j % 2 == 0) {
+                bebidaString = bebidaString + bebida[j] + ": "
+
+            } else {
+                bebidaString = bebidaString + bebida[j] + " <br>"
+
+            }
+        }
+
+
+        function mostraProdutos() {
+
+            htmlBebida.innerHTML = bebidaString;
+        }
+        htmlBebida.innerHTML = bebidaString;
+    </script>
+</body>
+
+</html>

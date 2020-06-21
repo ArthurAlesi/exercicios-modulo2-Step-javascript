@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title> Exercicio 3</title>
+</head>
+
+
+<body>
+
+
+    <script>
+        var soma = 0
+        var media = 0
+
+        for (i = 1; i <= 100; i++) {
+            soma += i
+        }
+
+
+        cont = 0;
+        for (j = 10; j <= 50; j++) {
+            if (j % 2 != 0) {
+                media += j
+                cont++
+            }
+        }
+
+        media /= cont
+
+
+
+        document.write("a soma dos 100 primeiros numeros = " + soma + "<br>")
+
+        document.write("A media dos numeros de 10 a 50 impares é " + media + "<br>")
+
+
+        for (c = 10; c >= 0; c--) {
+            if (c == 0) {
+                document.write("BOOM <br>")
+            } else {
+                document.write(c + ", ")
+            }
+        }
+
+
+        var mediaNota = 0;
+        for (var k = 1; k <= 3; k++) {
+            var nota = window.prompt("diga a nota " + k)
+            mediaNota += Number(nota)
+        }
+        mediaNota /= 3;
+        document.write("a media da nota foi " + mediaNota)
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9 exercício</title>
+
+</head>
+
+
+<body>
+    quantas temperaturas você quer ? <br>
+    <input id="qtdTemperatura">
+    <button onclick="escolher()">vai</button>
+
+    <div id="temperaturas"></div>
+
+    <p id="media"></p>
+
+    <script>
+        var n;
+
+
+
+
+        // --------------------------functions-------------
+
+        function escolher() {
+            n = document.getElementById("qtdTemperatura").value;
+            n = Number(n)
+            criaDiv(n)
+        }
+
+        function criaDiv(num) {
+            txt = ""
+            var nome = ""
+            nu = num
+            for (var i = 0; i < num; i++) {
+                nome = "temp" + i
+                txt += `<input id="${nome}"> <br>`
+
+            }
+
+            var botao = "<button onclick='calcular(nu)'>calcular</button>"
+            txt += botao;
+
+            document.getElementById("temperaturas").innerHTML = "<br> Diga as temperaturas? <br>" + txt
+        }
+
+        function calcular(param) {
+            var tempera = 0;
+            var nomeVar;
+            var n;
+            for (var j = 0; j < param; j++) {
+                nomeVar = "temp" + j
+                n = document.getElementById(nomeVar).value
+                n = Number(n)
+                tempera += n
+            }
+            tempera /= param
+            exibe(tempera)
+        }
+
+        function exibe(param) {
+            text = "A media foi " + param
+
+            document.getElementById("media").innerHTML = text
+
+
+        }
+    </script>
+
+
+</body>
+
+
+</html>

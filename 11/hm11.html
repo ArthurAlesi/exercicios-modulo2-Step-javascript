@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>ex 11</title>
+</head>
+
+<body>
+    <input id="num1" name="num1" placeholder="1 numero">
+    <label id="operador"> _ </label>
+    <input id="num2" placeholder="2 numero"> =
+    <label id="resul?"> ??</label><br> escolha a operação <br>
+    <button onclick="defineOperador('+')">+</button>
+    <button onclick="defineOperador('-')">-</button>
+    <button onclick="defineOperador('*')">*</button>
+    <button onclick="defineOperador('/')">/</button> <br>
+    <br>
+    <button onclick="zerar()">zerar</button>
+    <button onclick="calcular()">calcular</button>
+    <p id="resultad">Resultado:</p>
+
+    <script>
+        function calcular() {
+            let op = document.getElementById("operador").textContent
+            let n1 = document.getElementById("num1").value
+            n1 = Number(n1)
+            let n2 = document.getElementById("num2").value
+            n2 = Number(n2)
+
+            let conta;
+
+
+            switch (op) {
+                case "+":
+                    conta = n1 + n2
+                    exibir(n1, n2, op, conta)
+                    break;
+                case "-":
+                    conta = n1 - n2
+                    exibir(n1, n2, op, conta)
+                    break;
+                case "*":
+                    conta = n1 * n2
+                    exibir(n1, n2, op, conta)
+                    break;
+
+                case "/":
+                    conta = n1 / n2
+                    exibir(n1, n2, op, conta)
+                    break;
+                default:
+                    window.alert("escolha um operador")
+
+            }
+
+
+
+        }
+
+        function defineOperador(param) {
+            document.getElementById("operador").innerHTML = param
+        }
+
+        function zerar() {
+            document.getElementById("operador").innerHTML = "_"
+            document.getElementById("num1").value = null
+        }
+
+        function exibir(pr1, pr2, pr3, pr4) {
+            let text = "Resultado: <br>"
+            text += `${pr1} ${pr3} ${pr2} = ${pr4}`
+            document.getElementById("resultad").innerHTML = text
+            document.getElementById("resul?").innerHTML = pr4
+        }
+    </script>
+
+
+</body>
+
+</html>

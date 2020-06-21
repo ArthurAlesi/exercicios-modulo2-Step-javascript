@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let w = {}
+        w.y = 2;
+
+
+        // quuando eu uso this o atributo  é publico
+        // quando eu uso var ele é privado
+        // função anônima
+        // uso de delete
+
+        function Ponto(x, y) {
+            this.x = x
+            this.y = y
+
+        }
+
+        function Reta(p1, p2) {
+            this.p1 = p1
+            this.p2 = p2
+        }
+        po1 = new Ponto(1, 2)
+        po2 = new Ponto(3, 4)
+        po3 = new Ponto(5, 6)
+        po4 = new Ponto(7, 8)
+        po5 = new Ponto(9, 10)
+        po6 = new Ponto(11, 12)
+
+        reta1 = Reta(po1, po2)
+        reta2 = Reta(po3, po4)
+        reta3 = Reta(po5, po6)
+
+        function Triangulo(r1, r2, r3) {
+            this.r1 = r1
+            this.r2 = r2
+            this.r3 = r3
+            let cor;
+
+            function listaDePontos() {
+                return "rea1, x" + r1.p1.x + cor
+            }
+
+
+        }
+
+        triang = new Triangulo(reta1, reta2, reta3)
+
+
+
+        reta2 = new Reta(
+            new Ponto(10, 10),
+            new Ponto(20, 12)
+        );
+    </script>
+
+    <script>
+        // window.alert(w.y)
+        window.alert(w.y)
+    </script>
+
+</body>
+
+</html>

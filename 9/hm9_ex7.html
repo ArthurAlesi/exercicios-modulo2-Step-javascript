@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex 7</title>
+</head>
+
+<body>
+    diga a data de hoje <br>
+    <input placeholder="dd/mm/aaaa" oninput="completa()" id="data" maxlength="10">
+    <button onclick="dizData()">data</button>
+    <p id="result"></p>
+
+    <script>
+        function completa() {
+            var x = document.getElementById("data").value
+
+            if (x.length == 2) {
+                document.getElementById("data").value = x + "/"
+            }
+
+            if (x.length == 5) {
+                document.getElementById("data").value = x + "/"
+            }
+
+            if (x.length == 10) {
+                console.log(x)
+            }
+
+        }
+
+        function dizData() {
+            var dataString = document.getElementById("data").value
+            var dia = dataString[0] + dataString[1]
+            var mes = dataString[3] + dataString[4]
+            var ano = dataString[6] + dataString[7] + dataString[8] + dataString[9]
+            var mesExtenso = determinaMes(mes)
+
+            var texto = ""
+
+            texto += `dia: ${dia} <br>`
+            texto += `mês: ${mesExtenso}<br>`
+            texto += `ano: ${ano}<br>`
+
+            document.getElementById("result").innerHTML = texto
+        }
+
+        function determinaMes(param) {
+            var mexExt = ""
+            switch (param) {
+                case "01":
+                    mexExt = "janeiro"
+                    break;
+                case "02":
+                    mexExt = "Fervereiro"
+                    break;
+                case "03":
+                    mexExt = "março"
+                    break;
+                case "04":
+                    mexExt = "Abril"
+                    break;
+                case "05":
+                    mexExt = "Maio"
+                    break;
+                case "06":
+                    mexExt = "junho"
+                    break;
+                case "07":
+                    mexExt = "julho"
+                    break;
+                case "08":
+                    break;
+                    mexExt = "agosto"
+                    break;
+                case "09":
+                    mexExt = "Setembro"
+                    break;
+                case "10":
+                    mexExt = "outubro"
+                    break;
+                case "11":
+                    mexExt = "novembro"
+                    break;
+                case "12":
+                    mexExt = "dezembro"
+                    break;
+                default:
+                    mesExt = "inválido"
+            }
+            return mexExt
+        }
+    </script>
+</body>
+
+</html>

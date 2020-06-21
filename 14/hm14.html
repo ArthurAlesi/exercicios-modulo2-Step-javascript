@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+        #ceu {
+            height: 70px;
+            background: aqua;
+        }
+        
+        #aeroporto {
+            height: 30px;
+            background: rgb(211, 211, 211);
+        }
+        
+        .pergunta {
+            border-style: solid;
+            margin: 5px;
+            border-width: 1px;
+            padding: 2px;
+        }
+        
+        #estadoAviao {
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="ceu"></div>
+    <div id="aeroporto"></div>
+    <br>
+
+    <div class="pergunta">
+        aviao 1 <br>
+        <button onclick="decolar(1)">decolar</button> <br>
+        <button onclick="pousar(1)">aterrisar</button>
+
+    </div class="pergunta">
+
+    <div class="pergunta">
+        aviao 2<br>
+        <button onclick="decolar(2)">decolar</button> <br>
+        <button onclick="pousar(2)">aterrisar</button>
+
+    </div class="pergunta">
+
+    <div class="pergunta">
+        aviao 3<br>
+        <button onclick="decolar(3)">decolar</button> <br>
+        <button onclick="pousar(3)">aterrisar</button>
+
+    </div class="pergunta">
+
+    <div class="pergunta">
+        aviao 4<br>
+        <button onclick="decolar(4)">decolar</button> <br>
+        <button onclick="pousar(4)">aterrisar</button>
+
+    </div class="pergunta">
+
+    <div class="pergunta">
+        aviao 5<br>
+        <button onclick="decolar(5)">decolar</button> <br>
+        <button onclick="pousar(5)">aterrisar</button>
+
+    </div>
+
+    <p id="estadoAviao"> </p>
+    <script>
+        var texto = ""
+        aeroporto = []
+        listaGeral = []
+        criaAvioes()
+        document.getElementById("aeroporto").innerHTML = texto;
+
+
+
+        function decolar(param) {
+            var aviaoIn = false;
+
+            for (var i = 0; i < aeroporto.length; i++) {
+                // console.log(aeroporto[i].identificacao)
+                if (aeroporto[i].identificacao == param) {
+
+                    listaGeral.push(aeroporto[i])
+                    aeroporto.splice(i, 1)
+                    aviaoIn = true;
+                    break;
+                }
+            }
+            if (aviaoIn) {
+                document.getElementById("estadoAviao").innerHTML = `aviao ${param} decolou`
+            } else {
+                document.getElementById("estadoAviao").innerHTML = `aviao ${param} ja está voando`
+
+            }
+            exibir()
+        }
+
+        function pousar(param) {
+
+            var aviaoVoando = false;
+
+            for (var i = 0; i < listaGeral.length; i++) {
+                // console.log(aeroporto[i].identificacao)
+                if (listaGeral[i].identificacao == param) {
+
+                    aeroporto.push(listaGeral[i])
+                    listaGeral.splice(i, 1)
+                    aviaoVoando = true;
+                    break;
+                }
+            }
+            if (aviaoVoando) {
+                document.getElementById("estadoAviao").innerHTML = `aviao  ${param} Pousou`
+            } else {
+                document.getElementById("estadoAviao").innerHTML = `aviao ${param} ja está no aeroporo`
+
+            }
+            exibir()
+
+        }
+
+
+        function exibir() {
+            var txtPousado = ""
+            var txtVoando = ""
+            for (var j = 0; j < aeroporto.length; j++) {
+                txtPousado += "&#9992 "
+            }
+            for (var k = 0; k < listaGeral.length; k++) {
+                txtVoando += "&#9992 "
+            }
+            document.getElementById("aeroporto").innerHTML = txtPousado
+            document.getElementById("ceu").innerHTML = txtVoando
+        }
+
+        function criaAvioes() {
+            for (var i = 0; i < 5; i++) {
+                aeroporto[i] = new Aviao(true)
+                aeroporto[i].identificacao = Number(i + 1)
+
+                texto += "&#9992 "
+            }
+        }
+
+        function Aviao(estado) {
+            posicação = estado
+        }
+    </script>
+
+</body>
+
+</html>

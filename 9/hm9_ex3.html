@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex 3</title>
+</head>
+
+<body>
+    digite 5 numeros <br>
+    <input id="num0"> <br>
+    <input id="num1"> <br>
+    <input id="num2"> <br>
+    <input id="num3"> <br>
+    <input id="num4"> <br>
+    <button onclick="calcular()"> calcular </button>
+
+    <p id="resultado"></p>
+
+    <script>
+        //===================== function=====
+        function calcular() {
+            text = ""
+            var num;
+            var maior;
+            num = document.getElementById("num0").value
+            num = Number(num)
+            maior = num
+            for (var i = 1; i < 5; i++) {
+                text += "num" + i
+                num = document.getElementById(text).value
+                num = Number(num)
+                if (num > maior) {
+                    maior = num
+                }
+                text = ""
+            }
+
+            document.getElementById("resultado").innerHTML = `o maior numero foi ${maior}`
+        }
+    </script>
+</body>
+
+</html>

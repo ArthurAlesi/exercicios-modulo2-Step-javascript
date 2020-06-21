@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="apertar('conjunto1')">interruptor 1</button>
+    <button onclick="apertar('conjunto2')">interruptor 2</button>
+
+    <p id="conjunto1">
+        lampadas 1 2 e 3 apagadas
+    </p>
+    <p id="conjunto2">
+        lampadas 1 2 e 3 apagadas
+    </p>
+
+    <script>
+        var acesa = false
+        var lampada
+
+        function apertar(param) {
+            if (acesa == false) {
+                lampada = document.getElementById(param)
+                lampada.innerHTML = "lampada 1 2 e 3 ACESAS"
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

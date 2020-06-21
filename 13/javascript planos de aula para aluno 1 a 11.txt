@@ -1,0 +1,219 @@
+Conteúdo da disciplina da Javascript segundo a nova ementa de 28 aulas + introdução a programação
+
+O conteúdo desta disciplina é inteiramente interativo, os alunos refazendo no browser e na IDE de escolha (VSCode é a mais indicada) a demonstração do professor sobre sintaxes e algoritmos realizados em código. As referências extra-classe serão de páginas indicadas do livro de referência.
+
+
+STEP Javascript - Aula 1 de 28
+
+Nosso livro de referência é o Javascript – O Guia Definitivo. O livro será disponibilizado via link fornecido pelo professor, e/ou download junto com o homework
+
+TÓPICO - Introdução ao Javascript
+
+    • “Quebra-gelo” - um pequeno bate papo na sala para cala novo aluno falar muito brevemente sobre sua situação atual e o que projeta/deseja em relação a perspectivas pessoais e profissionais
+      
+    • Introdução geral: panorâmicas breves sobre a relação entre mercado e ciências da computação / sobre como o curso é estruturado / sobre quais são as obrigações do aluno em relação ao curso
+
+    • Apresentação de Tópico da aula: Introdução ao Javascript
+        ◦ Scripting na camada Client-side. Javascript: o que é, breve histórico. Diferenças com outras linguagens ECMA, versões, o conceito de Document Object Model, o conceito de Browser Object Model. Inserção em documentos HTML. Editores de código para o JavaScript
+
+    • Apresentação de tópico de aula: Algoritmos e Fluxogramas
+        ◦ Algoritmo. Conceito de algoritmo. Exemplos de uso de algoritmos na vida real. Tipos de algoritmos. Linear, ramificado, cíclico.
+        ◦ Fluxograma. Notação básica em fluxogramas. Bloco Inicial de Algoritmo. Bloco de Conclusão de Algoritmo. Unidade de entrada de dados. Unidade de saída de dados. Bloco de cálculo. Os exemplos mais simples de uso de fluxogramas.
+            ▪ Exercício em sala:
+                • Criar um algoritmo que monta uma receita de bolo. Exercício interativo, junto com os alunos. Montar o pseudo-código equivalente. Montar o fluxograma equivalente.
+
+    • Apresentação de tópico de aula: sintaxe básica do Javascript
+        ◦ Incorporando documentos HTML
+        ◦ A tag <noscript>
+        ◦ Sintaxe básica. Sensitividade (case sensitivity). Comentários, palavras reservadas
+        ◦ Variáveis. Regras para nomes de variáveis
+        ◦ Tipos de dados
+        ◦ Apresentação de exemplos:
+            ▪ Codigo de um script comum embutido em página HTML
+                • Será construído ‘in loco’ na IDE escolhida
+        ◦ Exercício em sala:
+            ▪ Criar um script que realiza atribui valores a variáveis e os exibe na console do browser
+              
+        ◦ Referências extra classe: livro de referência, teórica: págs 1 a 17. Específica: 22 a 27
+
+
+STEP Javascript - Aula 2 de 28
+
+TÓPICO - Introdução ao Javascript parte 2
+
+    • Apresentação de Tópico da aula: revisitando tipos de dados / introduzindo operadores
+        ◦ Variáveis. Regras para nomes de variáveis
+        ◦ Tipos de dados
+        ◦ Operadores. Operações aritméticas
+        ◦ Apresentação de exemplos:
+        ◦ Codigo de um script comum embutido em página HTML
+            ▪ Será construído ‘in loco’ na IDE escolhida
+        ◦ Exercício em sala:
+            ▪ Criar um script que realiza operações aritméticas e lógicas e exibe resultados na console do browser
+        ◦ Operadores relacionais. Operadores lógicos. Operador de atribuição. Operadores bitwise. Ordem de precedência de operadores, O operador typeof
+        ◦ Apresentação de exemplos:
+            ▪ Codigo de um script comum embutido em página HTML
+                • Será construído ‘in loco’ na IDE escolhida
+        ◦ Exercício em sala:
+            ▪ Criar um script que realiza operações aritméticas e lógicas e exibe resultados na console do browser
+
+        ◦ Referências extra classe: livro de referência, Parte I – 3 e I - 4
+
+
+STEP Javascript - Aula 3 de 28
+
+TÓPICO - Introdução ao Javascript parte 3
+
+    • Apresentação de Tópico da aula: entradas e saídas de dados
+        ◦ Como o Javascript manipula entrada e saída de dados / uso da palavra ‘this’
+        ◦ Entrada e saída de dados em caixas de texto HTML. Caixas de diálogo
+        ◦ Exercício em sala:
+            ▪ Fazer um programa que implementa entrada de dados via caixa de texto
+        ◦ Os vários tipos de elementos para entrada e saída de dados no HTML. Sua manipulação pelo javascript
+        ◦ Exercício em sala:
+            ▪ Fazer um programa que interpreta várias entradas de dados, como menus de drop down, option boxes, etc.
+        ◦ Exercício em sala:
+            ▪ Fazer um programa que implementa completamente um cadastro de aluno
+              
+        ◦ Referências extra classe: livro de referência, ???????????????????????????
+
+
+
+STEP Javascript - Aula 4 de 28
+
+TÓPICO - Revisão do Módulo I - Introdução ao Javascript
+
+    • Apresentação de Tópico da aula: Revisão do módulo I
+        ◦ Primeira parte: revisão da sintaxe do javascript
+            ▪ Seção de tira-dúvidas
+            ▪ Exercícios: implementar e testar vários comandos javascript para verificar se estão corretos ou errados
+        ◦ Segunda parte: revisão sobre tipos de dados e operadores
+            ▪ Seção de tira-dúvidas
+            ▪ Exercícios: implementar e testar várias operaçãoes matemáticas e lógicas para verificar se estão corretas ou erradas
+        ◦ Terceira parte: revisão sobre entradas e saídas de dados
+            ▪ Seção de tira-dúvidas
+            ▪ Exercícios: dadas várIas exigências de tipos de dados diferentes em um cadastro, implementar entradas HTML e codigo javascript pertinente a cada entrada
+          
+
+STEP Javascript - Aula 5 de 28
+
+TÓPICO - Operadores Lógicos / Estruturas de Desvio Condicional
+
+    • Apresentação de Tópico da aula: operadores lógicos
+        ◦ Conceito de condição. Conceito de verdadeiro e falso
+        ◦ Ampliação do estudo sobre operadores: operadores lógicos usados em condicionais
+        ◦ Exercício em sala:
+            ▪ Fazer um programa que realiza testes em condições usando cada um dos operadores lógicos e verificando seus resultados true ou false
+            ▪ 
+        ◦ Referências extra classe: livro de referência, Parte I -5
+
+
+STEP Javascript - Aula 6 de 28
+
+TÓPICO - Operadores Lógicos / Estruturas de Desvio Condicional
+
+    • Apresentação de Tópico da aula: estruturas de desvio condicional
+        ◦ Designação de condições nos fluxogramas. Bloco de condição
+        ◦ Designação da união de ramificações nos fluxogramas.
+        ◦ Comando If
+        ◦ Exercicio em sala:
+            ▪ Fazer um script que implementa decisões usando Ifs.
+        ◦ Variação If-else
+        ◦ Operador ternário: ?
+        ◦ Exercício em sala
+            ▪ Fazer um script que implementa decisões usando If-elses e operadores ternários
+            ▪ 
+        ◦ Referências extra classe: livro de referência, Parte I -5
+
+
+STEP Javascript - Aula 7 de 28
+
+TÓPICO - Operadores Lógicos / Estruturas de Desvio Condicional parte 2
+
+    • Apresentação de Tópico da aula: desvios condicionais, continuação
+        ◦ Revisão do conceito de condição
+        ◦ Condições compostas
+        ◦ Encademento de Ifs
+        ◦ Exercício em sala:
+            ▪ Fazer vários programas que implementam decisões compostas e divisão encadada de condições
+              
+        ◦ Referências extra classe: livro de referência, Parte I -5
+
+
+STEP Javascript - Aula 8 de 28
+
+TÓPICO - Revisão do Módulo II: Operadores Lógicos e Condições
+
+    • Apresentação de Tópico da aula: operadores lógicos
+        ◦ Primeira parte: revisão sobre o conceito de desvio condicional e o comando if
+            ▪ Seção tira-dúvidas
+            ▪ Exercício
+                • Exercícios: implementar e testar vários códigos javascript com if para verificar se estão corretos ou errados
+        ◦ Segunda parte: revisão sobre a estrutura if-else
+            ▪ Seção tira-dúvidas
+            ▪ Exercício
+                • Exercícios: implementar e testar vários códigos javascript com if-else para verificar se estão corretos ou errados
+        ◦ Terceira parte: revisão sobre o operador ternário: ?
+            ▪ Seção tira-dúvidas
+            ▪ Exercício
+                • Exercícios: implementar e testar vários códigos javascript com o operador: ? para verificar se estão corretos ou errados
+
+
+STEP Javascript - Aula 9 de 28
+
+TÓPICO - Estruturas de Repetição (Loops)
+
+    • Apresentação de Tópico da aula: Fuxos cíclicos de tarefas: o que são.
+        ◦ A necessidade do estabelecimento de tarefas repetitivas
+        ◦ Parametros que podem variar em uma tarefa repetitiva
+        ◦ Estrutura de um fluxo cíclico
+            ▪ Designação de ciclos nos diagramas de blocos. Bloco de ciclo.
+            ▪ Exemplos de construção de programas usando ciclos na linguagem de fluxogramas.
+    • Apresentação de Tópico de aula: loops em javascript
+        ◦ Os loops em programação
+        ◦ O comando while.
+        ◦ Exercício
+            ▪ Exercícios: implementar uma tarefa repetitiva usando while.
+              
+          Referências extra classe: livro de referência, Parte I -5
+
+
+
+STEP Javascript - Aula 10 de 28
+
+TÓPICO - Estruturas de Repetição (Loops) parte 2
+
+    • Apresentação de Tópico da aula: estruturas de repetição, continuação
+        ◦ A necessidade do estabelecimento de tarefas repetitivas
+        ◦ Parametros que podem variar em uma tarefa repetitiva
+        ◦ Estrutura de um fluxo cíclico (variação para demonstração do comando for)
+            ▪ Designação de ciclos nos diagramas de blocos. Bloco de ciclo.
+            ▪ Exemplos de construção de programas usando ciclos na linguagem de fluxogramas.
+    • Apresentação de Tópico de aula: loops em javascript, comando for
+        ◦ O comando for.
+        ◦ Exercício
+            ▪ Exercícios: implementar tarefas repetitivas usando for.
+              
+        ◦ Referências extra classe: livro de referência, Parte I -5
+
+
+
+STEP Javascript - Aula 11 de 28
+
+TÓPICO - Estruturas de Repetição (Loops) parte 3
+
+    • Apresentação de Tópico da aula: estruturas de repetição, continuação
+        ◦ O comando do
+        ◦ Estrutura de um fluxo cíclico (variação para demonstração do comando do)
+            ▪ Designação de ciclos nos diagramas de blocos. Bloco de ciclo.
+            ▪ Exemplos de construção de programas usando ciclos na linguagem de fluxogramas.
+    • Apresentação de Tópico de aula: loops em javascript, comando do
+        ◦ O comando do.
+        ◦ Exercício
+            ▪ Exercícios: implementar tarefas repetitivas usando do
+    • Apresentação de Tópico de aula
+        ◦ Os comandos break e continue.
+        ◦ Exercício
+            ▪ Exercícios: implementar tarefas repetitivas onde podem ser inseridos os comandos break e continue
+              
+        ◦ Referências extra classe: livro de referência, Parte I -5

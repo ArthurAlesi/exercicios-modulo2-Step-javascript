@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>aula 8</title>
+</head>
+
+<body>
+
+
+    O cliente comprou as seguintes jujubas
+    <p id="comprador1"></p>
+
+
+
+
+    <script>
+        var carrocinha = []
+
+        // define as cores
+        var cor = ["vermelho", "verde", "amarelo", "roxo"]
+            // define sabores 
+        var sabor = ["uva", "limão", "abacaxi", "melancia", "morango", "tangerina"]
+
+        // sorteia um numero para definir em qual saco o premio vai entrar
+        var escolhido = Math.floor(Math.random() * (10));
+        console.log("escolhido = " + escolhido)
+
+        // 10 sacos
+        for (var i = 0; i < 10; i++) {
+
+            carrocinha.push([])
+
+            var num = Math.floor(Math.random() * (9) + 1)
+            console.log("sorteio = a " + num)
+            for (var j = 0; j < num; j++) {
+                carrocinha[i].push(new Object())
+                carrocinha[i][j].sabor = sorteiaSabor(0, sabor.length)
+                    // escolhe sabor
+                carrocinha[i][j].colorido = sorteiaCor(0, cor.length)
+                    // escolhe a cor
+                    // if sorteado add rpemio
+
+
+            }
+
+            if (i == escolhido) {
+                carrocinha[i].push("premio")
+            }
+
+        }
+
+
+
+        function sorteiaSabor(min, max) {
+            var nume = Math.floor(Math.random() * (max - min) + min)
+
+            var taste = sabor[nume]
+            return taste;
+        }
+
+        function sorteiaCor(min, max) {
+            var num = Math.floor(Math.random() * (max - min) + min)
+            color = cor[num]
+            return color
+        }
+
+
+        function comprar() {
+            var comprado = carrocinha[0]
+            carrocinha.shift();
+            return comprado
+        }
+
+
+        function exibir(param) {
+            var text = ""
+            var tam = param.length
+            if (param[param.length - 1] == "premio") {
+                text += " <strong> GANHADOR DO PRÊMIO </strong> <br>"
+                tam--
+            }
+            text += "total jujubas: " + tam + " <br>"
+            for (var i = 0; i < tam; i++) {
+                text += "jujuba" + (i + 1) + ":  "
+                text += "sabor: " + param[i].sabor + ",  "
+                text += "cor: " + param[i].colorido + " <br>"
+            }
+
+
+
+
+            document.getElementById("comprador1").innerHTML = text
+        }
+
+
+        var cliente1 = comprar()
+        exibir(cliente1)
+        console.log(cliente1)
+        console.log(carrocinha)
+    </script>
+
+
+</body>
+
+</html>

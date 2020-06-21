@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/*  o position padrao de todos os elementos é static */
+
+body {
+    background-color: #b2bec3;
+    font-family: Open Sans, sans-serif;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+.elementExample {
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    color: #fff;
+    text-transform: center;
+    text-align: center;
+    ;
+    cursor: pointer;
+}
+
+.elementExample_first {
+    background-color: #6c5ce7;
+    position: absolute;
+    right: 0;
+}
+
+.elementExample_second {
+    opacity: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #00b894;
+}
+
+.elementExample_last {
+    background-color: #d63031;
+    position: absolute;
+}
+
+.elementExample-internal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #00cec9;
+}

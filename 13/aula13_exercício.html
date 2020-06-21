@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <title> exerício aula 13</title>
+</head>
+
+<body>
+
+    teste
+    <script>
+        // minha tentativa
+        //    p = {
+        //      this: new Passaro(),
+        //
+        //          a: andar()
+        //
+        //
+        //      }
+        //    p.a
+        //
+        //      p2 = {
+        //        this: new Passaro(),
+        //
+        //          a: voar()
+        ///
+        //
+        //      }
+        //    p2.a
+
+
+        // 1º jeito
+        p1 = {}
+        p2 = {}
+        p1.voar = function voar() {}
+        p2.andar = function andar() {}
+
+
+        // 2º jeito
+        p1 = {
+            voar: function voar() {}
+        }
+
+        p2 = {
+            andar: function andar() {}
+        }
+
+        // 3º jeito
+        function Passaro() {
+            var asas = "xxx";
+            this.voar = voar;
+
+            function voar() {
+                console.log(asas)
+            }
+        }
+    </script>
+</body>
+
+</html>

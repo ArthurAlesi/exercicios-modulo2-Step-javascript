@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>exercicio 2</title>
+    <style>
+        input {
+            margin: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" placeholder="Nome" id="nome">
+    <button type="button" onclick="clickName()">vai</button> <br>
+
+    <input type="text" placeholder="escolaridade  f/m/s " id="escolaridade">
+    <button type="button" onclick="checaEscola()">vai</button> <br>
+
+    <input type="text" placeholder="Idade" id="idade">
+    <button type="button" onclick="checaIdade()">vai</button> <br>
+
+    <input type="text" placeholder="Nota 1" id="nt1">
+    <button type="button">vai</button> <br>
+
+    <input type="text" placeholder="Nota 2" id="nt2">
+    <button type="button">vai</button> <br>
+
+    <input type="text" placeholder="Nota 3" id="nt3">
+    <button type="button">vai</button> <br>
+
+
+
+    <p id="demo"></p>
+
+    <script>
+        function clickName() {
+            var nome = document.getElementById("nome").value
+            if (isNaN(nome) == false) {
+                document.getElementById("demo").innerHTML = "nome " + nome + " não é válido";
+            }
+        }
+
+        function checaEscola() {
+            var escol = document.getElementById("escolaridade").value
+            if ((escol != "f" && (escol != "m") && (escol != "s"))) {
+                document.getElementById("demo").innerHTML = "escolaridade " + escol + " não é válida";
+            }
+        }
+
+
+        function checaIdade() {
+            var idade = document.getElementById("idade").value
+            if (isNaN(idade) == true) {
+                document.getElementById("demo").innerHTML = "idade " + idade + " não é válido";
+            }
+
+
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

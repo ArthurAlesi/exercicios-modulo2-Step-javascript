@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="unicode">
+    <script src="codigo17.js"></script>
+    <title>Document</title>
+    <style>
+        img {
+            widows: 100px;
+            height: 100px;
+        }
+        
+        .Animais {
+            border-style: solid;
+            border-width: 1px;
+            margin: 2px;
+        }
+        
+        #fraseBicho {
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="iniciar()">
+    cachorro &#128021; <br> gato &#128008; <br> Papagaio &#128038; <br> lagartixa &#128010; <br>
+
+    <div class="Animais"> cachorro
+        <img src="./animais/cachorro.png">
+        <button onclick="irAoVeterinario('cachorro')"> ir ao veterinário</button>
+        <button onclick="examinar('cachorro')">examinar</button>
+    </div>
+
+
+    <div class="Animais">gato<img src="./animais/gato.png">
+        <button onclick="irAoVeterinario('gato')"> ir ao veterinário</button>
+        <button onclick="examinar('gato')">examinar</button>
+    </div>
+
+    <div class="Animais">papagaio<img src="./animais/papagaio.png">
+        <button onclick="irAoVeterinario('papagaio')"> ir ao veterinário</button>
+        <button onclick="examinar('papagaio')">examinar</button>
+    </div>
+
+    <div class="Animais">lagartixa<img src="./animais/lagartixa.png">
+        <button onclick="irAoVeterinario('lagartixa')"> ir ao veterinário</button>
+        <button onclick="examinar('lagartixa')">examinar</button>
+    </div>
+    <div>
+        <p id="veterin"></p>
+
+    </div>
+    <p id="fraseBicho"></p>
+
+</body>
+
+</html>

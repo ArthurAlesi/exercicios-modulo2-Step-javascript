@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title> exercicio 01 </title>
+
+    <style>
+        #idade {
+            width: 40%;
+            margin: 5px;
+        }
+        
+        div {
+            width: 40%;
+            margin: 5px;
+            border-style: solid;
+            border-width: 1px;
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" placeholder="Digite sua idade" id="idade">
+
+    <div>
+
+        você tem carteira ? <br>
+        <input type="radio" name="possuirCarteira" id="verdadeiro" checked> sim
+        <input type="radio" name="possuirCarteira" id="falso"> não
+        <br>
+        <input type="text" placeholder="ano de validade carteira" id="validade">
+        <br>
+    </div>
+
+    <div>
+        voce está em um carro ? <br>
+        <input type="radio" name="dentro" id="carroSim" checked> sim
+        <input type="radio" name="dentro" id="carroNao"> não
+    </div>
+
+    <div>
+        você está viajando com alguem? <br>
+        <input type="radio" name="viajando" id="acompanhado" checked> acompanhado
+        <input type="radio" name="viajando" id="sozinho"> sozinho
+    </div>
+
+
+    <input type="button" value="enviar" onclick="analisar()">
+
+
+    <p id="demo"></p>
+
+
+    <script>
+        function analisar() {
+            var idade = document.getElementById("idade")
+            idade = idade.value;
+            var carteira = document.getElementById("verdadeiro");
+            var validade = document.getElementById("validade").value;
+            var estaNumCarro = document.getElementById("carroSim");
+            var compania = document.getElementById("acompanhado");
+
+
+            //  window.alert(possuirCarteira)
+
+            if (idade >= 18) {
+
+                if (carteira.checked == true) {
+                    if (validade == 2005) {
+
+                        if (estaNumCarro.checked == true) {
+                            if (compania.checked == true) {
+                                if (compania.checked == true) {
+                                    doisCarros();
+                                } else {
+                                    bemVindo()
+
+                                }
+                            } else {
+                                umCarro()
+                            }
+
+                        }
+
+                    } else {
+                        zera()
+                    }
+                } else {
+                    zera()
+                }
+
+
+            } else {
+                document.getElementById("demo").innerHTML = "Você é menor de idade";
+            }
+        }
+
+        function bemVindo() {
+            document.getElementById("demo").innerHTML = "Bem Vindo";
+        }
+
+        function umCarro() {
+            document.getElementById("demo").innerHTML = "Bem Vindo!, mas volte com 1 carro";
+        }
+
+        function doisCarros() {
+            document.getElementById("demo").innerHTML = "bem vindo!, mas volte com dois carros";
+        }
+
+        function zera() {
+            document.getElementById("demo").innerHTML = " ";
+
+        }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

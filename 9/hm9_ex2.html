@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9 - Exercício 2</title>
+</head>
+
+<body>
+
+    diga os numeros <br>
+    <input id="num1"> <br>
+    <input id="num2"><br>
+    <input id="num3"><br>
+    <input id="num4"><br>
+    <input id="num5"><br>
+    <button onclick="calculaQuadrado()">go!</button>
+
+    <div id="quadrados">2</div>
+    <script>
+        // 2- faça um programa que entre com cincos numeros e imprima o quadrado de cada número
+
+
+
+        //===================================================
+        function calculaQuadrado() {
+            text = ""
+            for (var i = 1; i <= 5; i++) {
+                var nomeId = "num" + i
+                var num = document.getElementById(nomeId).value
+                num = Number(num)
+                text += " o quadrado de " + num + " é " + (num * num) + " <br>"
+
+            }
+            document.getElementById("quadrados").innerHTML = text
+        }
+    </script>
+</body>
+
+</html>

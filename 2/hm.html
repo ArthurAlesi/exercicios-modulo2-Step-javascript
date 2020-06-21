@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Homework Arthur</title>
+</head>
+
+<body>
+
+    <script>
+        window.alert("é necessário realizar um cadastro")
+        var confirmacao = window.confirm("Você deseja continuar?")
+
+        if (confirmacao) {
+            var nome = window.prompt("Diga seu nome");
+            var telefone = parseInt(window.prompt("Diga seu telefone"));
+            var salario = parseFloat(window.prompt("Diga seu salario"));
+
+
+            document.write(`nome: ${nome}<br>`);
+            document.write(`telefone: ${telefone} <br>`);
+            document.write(`salario: ${salario} <br>`);
+
+        } else {
+            document.write("    Cadastro não realizado !!")
+        }
+    </script>
+
+</body>
+
+</html>

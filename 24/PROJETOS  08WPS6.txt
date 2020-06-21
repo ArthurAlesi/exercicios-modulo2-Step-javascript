@@ -1,0 +1,79 @@
+Átila
+
+Restaurante:
+Fazer uma index que mostra um cardápio (lista de pratos).
+O usuário selecinona um ou mais pratos num "carrinho"
+e este carrinho fica vinculado ao nome do usuário que está escolhendo os pratos
+Fazer mais 1 pag ("encerrar a seleção") - com o resumo
+da seleção anterior (da index) e opção de confirmar o pedido
+(mostrando também o nome do usuário que fez esse pedido).
+Ao confirmar o pedido, voltar pra index e mostrar
+uma mensagem de que o pedido foi processado.
+
+Fazer mais 1 pag que mostra o histórico dos pedidos já processados
+(com o total do caixa: soma total de todos os pedidos já
+processados) e o nome do usuário de cada pedido
+
+========================================================
+
+Mateus Alves
+
+Venda Promocional:
+Fazer uma index com o produto a ser vendido.
+Quando o usuário selecionar "comprar" na index:
+
+Fazer +1 pag com o detalhes técnicos do produto
+(minimamente o nome e o código do produto) e 
+nesta página o usuário deverá também informar o nome
+e o email (com opção confirmar)
+
+Fazer +1 pag de "confirmado". Instruções de entrega, prazos,
+etc. (com opção ok). Ao clicar ok, volta pra index.
+
+Fazer +1 pag com o histórico da compra desse produto. Esse
+histórico deve mostrar o nome de cada usuário que já. Nesta
+página, exibir a quantidade em estoque
+
+========================================================
+
+Arthur
+
+"aplicativo" de pedido de comida
+
+Fazer uma index que mostra uma lista de comidas.
+O usuário selecinona um ou mais comidas num "carrinho"
+e este carrinho fica vinculado ao nome do usuário que está escolhendo as comidas
+Fazer mais 1 pag ("encerrar a seleção") - com o resumo
+da seleção anterior (da index) e opção de confirmar o pedido
+(mostrando também o nome do usuário que fez esse pedido).
+Ao confirmar o pedido, voltar pra index e mostrar
+uma mensagem de que o pedido foi processado.
+
+Fazer mais 1 pag que mostra o histórico dos pedidos já processados
+(com o total do volume de vendas do dia(soma total de todos os pedidos já
+processados) e o nome do usuário de cada pedido
+
+========================================================
+
+André
+
+Caixa eletrônico:
+Fazer 1 index com as opções: usuário e gerente de conta
+
+Fazer +1 pag (usuáio) com a identificação do usuário (numero da conta e senha). Após a validação correta:
+
+Fazer +1 pag (operação do usuário) com as opções de saque e deposito
+
+Fazer +1 pag (gerente de conta) com a listagem de todos os 
+usuários da agência, seus saldos, e o saldo total da agência
+
+========================================================
+
+Matheus Príncipe - NO RETORNO DO RECESSO, APRESENTAR A IDEIA O MAIS RÁPIDO POSSÍVEL
+
+========================================================
+
+João = - NO RETORNO DO RECESSO, APRESENTAR A IDEIA O MAIS RÁPIDO POSSÍVEL
+
+========================================================
+

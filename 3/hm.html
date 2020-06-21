@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>homewowrk</title>
+</head>
+
+<body>
+
+
+
+
+    <script>
+        var a = Number(window.prompt("Dia um valor para a"))
+        var b = Number(window.prompt("Dia um valor para b"))
+        var c = Number(window.prompt("Dia um valor para c"))
+        var d = Number(window.prompt("Dia um valor para d"))
+
+        document.write(`a =${a} <br>`)
+        document.write(`b =${b} <br>`)
+        document.write(`c =${c} <br>`)
+        document.write(`d =${d} <br> <br>`)
+
+        var conta = a + b + c;
+        document.write(`a + b + c = ${conta} <br>`)
+        conta = (a + b) - c;
+        document.write(`(a + b) - c = ${conta} <br>`)
+
+        conta = ((a - b) * c) - d;
+        document.write(`((a - b) * c) - d = ${conta} <br>`)
+
+        conta = a++;
+        document.write(`a++ = ${conta}  <<<<<<<<< (não entendi) <br>`)
+
+        conta = a--;
+        document.write(`a-- = ${conta} <<<<<<<<< (não entendi) <br>`)
+
+        a = "25"
+        document.write(`a = ${a} <br>`)
+
+        conta = a == 25;
+        document.write(`a == 25  ${conta} <br>`)
+        conta = a === 25
+        document.write(`a === 25  ${conta}<br>`)
+
+        document.write("====================================================== <br>")
+            // Corintias
+        var coM = 40
+        var coF = 10
+        var corTotal = coM + coF
+
+        // Palmeiras
+        var palM = 30
+        var palF = 5
+        var palTotal = palM + palF
+
+        //Sap paulo
+        var spM = 36
+        var spF = 8
+
+        // Santos
+        var sanM = 25
+        var sanF = 2
+
+        var torcedorMulher = coF + palF + spF + sanF
+        var diferenca = corTotal - palTotal
+
+        document.write(` total de palmerenses é ${palTotal} <br>`)
+        document.write(` torcedoras mulheres no total  é ${torcedorMulher} <br>`)
+        document.write(` A diferença entre corintianos e palmerenses é de ${diferenca} pessoas <br>`)
+
+        document.write("====================================================== <br> Chocolates <br>")
+
+        var a, b, c, ab, ac, bc, abc, nenhum;
+
+        a = 17
+        b = 20
+        c = 21
+        ab = 8
+        ac = 6
+        bs = 7
+        abc = 5
+        nenhum = 8
+        total = a + b + c + nenhum;
+
+        document.write(`a) Gostam das 3: ${abc} <br> `)
+
+        document.write("b) Gostam de duas marcas <br>")
+        document.write(`A e B: ${ab} <br>`)
+        document.write(`A e C: ${ac} <br>`)
+        document.write(`B e C: ${bc} <br>`)
+
+        document.write(`c) gostam somente de A: ${a} <br>`)
+        document.write(`   gostam somente de B: ${b} <br>`)
+        document.write(`   gostam somente de C: ${c} <br>`)
+
+        document.write(`d) Não entendi <br>`)
+
+        document.write(`e) o total é ${total}`)
+    </script>
+
+
+
+</body>
+
+</html>

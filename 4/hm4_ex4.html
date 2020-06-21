@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>exercicio 4</title>
+</head>
+
+
+
+<body>
+
+    <script>
+        var n1 = Number(window.prompt("diga o numero 1"))
+        var n2 = Number(window.prompt("diga o numero 2"))
+        var n3 = Number(window.prompt("diga o numero 3"))
+
+
+        document.write("numero 1: " + n1 + " <br>")
+        document.write("numero 2: " + n2 + " <br>")
+        document.write("numero 3: " + n3 + " <br>")
+
+
+
+
+
+        if (n1 == n2 && n1 != n3) {
+            document.write("numero 1 e 2 sao iguais")
+        } else if (n1 == n3 && n1 != n2) {
+            document.write("numero 1 e 3 são iguais")
+
+        } else if (n2 == n3 && n2 != n1) {
+            document.write("numero 2 e 3 são iguais")
+        }
+
+
+        if (n1 + n2 > n3) {
+            document.write(`soma de ${n1} e ${n2} são maiores q ${n3}`)
+        } else {
+            document.write(`soma de ${n1} e ${n2} são iguais ou menores que ${n3}`)
+        }
+    </script>
+
+
+
+
+</body>
+
+
+</html>

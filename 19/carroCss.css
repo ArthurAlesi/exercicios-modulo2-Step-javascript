@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(238, 213, 213);
+}
+
+div {
+    position: absolute;
+    height: 270px;
+    width: 200px;
+    background-color: blanchedalmond;
+}
+
+#botao1 {
+    position: absolute;
+}
+
+#botao2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#botao3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#botao4 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

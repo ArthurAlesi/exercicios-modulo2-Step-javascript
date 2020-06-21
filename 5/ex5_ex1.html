@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Aula 05 _ 1</title>
+</head>
+
+<body>
+    <script>
+        var lista = [5, 3, -1, 14, 77, 32]
+        var contagem = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+        nota = [6, 7, 8, 9, 10]
+
+        var soma = 0;
+        for (var i = 0; i < lista.length; i++) {
+            soma += lista[i]
+        }
+        document.write(`a soma dos numeros da lista é ${soma} <br>`)
+
+
+        for (var j = 0; j <= 11; j++) {
+            if (contagem[j] == 0) {
+                document.write("Boom!!")
+                break;
+            }
+            document.write(contagem[j] + ", ")
+
+        }
+        var cont = 0
+        var media = 0
+        while (cont != 5) {
+            media += nota[cont]
+            cont++
+        }
+        media /= nota.length
+        document.write(`<br>notas = [${nota}]`)
+        document.write(`<br> a media das notas é ${media}`)
+        document.write("<br>========================================================<br>")
+    </script>
+
+
+
+</body>
+
+</html>

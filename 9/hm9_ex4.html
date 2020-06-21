@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex 4</title>
+</head>
+
+<body>
+
+
+    <script>
+        var idade;
+        var diMaior = 0;
+        var diMenor = 0;
+        do {
+            idade = window.prompt("diga uma idade / -1 para sair")
+
+            if (idade >= 18) {
+                diMaior++
+            } else if (idade == -1) {
+                break
+            } else {
+                diMenor++
+            }
+
+
+
+        } while (idade != -1)
+
+        document.write(`Maiores de idade: ${diMaior} pessoas <br>`)
+        document.write(`Menores de idade: ${diMenor} pessoas`)
+    </script>
+
+
+</body>
+
+</html>

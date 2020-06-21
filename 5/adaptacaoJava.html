@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>adaptação de java</title>
+</head>
+
+<body>
+    <script>
+        //    Scanner s = new Scanner(System.in);
+        //    int num;
+        //    int maior = 0;
+        //    int menor = 0;
+        //    int numPares = 0;
+        //    int numImpares = 0;
+        //    System.out.print("Informe um número (-1 para terminar): ");
+        //    num = s.nextInt();
+        //    do {
+        //        System.out.print("Informe um número (-1 para terminar): ");
+        //        num = s.nextInt();
+        //        if (num == -1) break;
+        //        if (num >= maior) maior = num;
+        //        if (num <= menor) menor = num;
+        //        if (num % 2 == 0) numPares++;
+        //        else numImpares++;
+        //    } while (true);
+        //   System.out.println("Maior número: " + maior);
+        //    System.out.println("Menor número: " + menor);
+        //    System.out.println("Quantidade de pares: " + numPares);
+        //    System.out.println("Quantidade de ímpares: " + numImpares);
+
+
+        var num;
+        var maior = 0;
+        var menor = 0;
+        var numPares = 0;
+        var numImpares = 0;
+        //  lista:
+        var lista = []
+
+
+
+        num = window.prompt("Informe um número (-1 para terminar): ")
+        num = Number(num)
+        lista.push(num)
+        maior = menor = num
+        if (num % 2 == 0) numPares++;
+        else numImpares++;
+        do {
+            num = window.prompt("Informe um número (-1 para terminar): ")
+            num = Number(num)
+            if (num == -1) break;
+            if (num >= maior) maior = num;
+            if (num <= menor) menor = num;
+            if (num % 2 == 0) numPares++;
+            else numImpares++;
+            lista.push(num)
+        } while (true);
+
+        document.write(`[${lista}]<br>`)
+        document.write(`Maior numero ${maior} <br>`)
+        document.write(`menor numero ${menor} <br>`)
+        document.write(`Quantidade de pares: ${numPares} <br>`)
+        document.write(`Quantidade de Impares: ${numImpares} <br>`)
+    </script>
+</body>
+
+</html>
